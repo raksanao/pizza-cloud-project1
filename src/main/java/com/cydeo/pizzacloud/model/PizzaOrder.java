@@ -1,8 +1,14 @@
 package com.cydeo.pizzacloud.model;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class PizzaOrder {
 
     private String deliveryName;

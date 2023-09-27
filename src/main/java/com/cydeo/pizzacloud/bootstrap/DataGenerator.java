@@ -12,13 +12,13 @@ public class DataGenerator {
     public static List<Cheese> cheeseTypeList;
     public static List<Sauce> sauceTypeList;
     public static List<Topping> toppingTypeList;
-
+   // public static List<Cheese> cheeseList;
     static {
 
         cheeseTypeList = Arrays.asList(Cheese.values());
         sauceTypeList = Arrays.asList(Sauce.values());
         toppingTypeList = Arrays.asList(Topping.values());
-
+//cheeseList=Arrays.asList(Cheese.values());
     }
 
 }

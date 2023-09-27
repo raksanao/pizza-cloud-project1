@@ -9,18 +9,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.UUID;
 
-@Controller
 
+@Controller
 public class DesignPizzaController {
 
     private PizzaRepository pizzaRepository;
 
-    @PostMapping
+    public DesignPizzaController(PizzaRepository pizzaRepository) {
+        this.pizzaRepository = pizzaRepository;
+    }
+
+    @PostMapping("/design")//i added designer
     public String showDesignForm(Model model) {
 
         model.addAttribute("cheeses", DataGenerator.cheeseTypeList);
         model.addAttribute("sauces", DataGenerator.sauceTypeList);
         model.addAttribute("toppings", DataGenerator.toppingTypeList);
+        model.addAttribute("cheeseList", DataGenerator.cheeseTypeList);
+
+        model.addAttribute("sauceList",DataGenerator.sauceTypeList);
+        model.addAttribute("toppingList",DataGenerator.toppingTypeList);
 
         return "/design";
 

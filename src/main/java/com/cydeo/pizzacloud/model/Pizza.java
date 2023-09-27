@@ -3,12 +3,17 @@ package com.cydeo.pizzacloud.model;
 import com.cydeo.pizzacloud.enums.Cheese;
 import com.cydeo.pizzacloud.enums.Sauce;
 import com.cydeo.pizzacloud.enums.Topping;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 import java.util.UUID;
 
 @Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Pizza {
 
     private UUID id;
